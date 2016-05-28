@@ -1,0 +1,47 @@
+﻿<Window x:Class="Bulkes.EndGameDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bulkes"
+        mc:Ignorable="d"
+        Title="EndGameDialog" Height="200" Width="300"
+        AllowsTransparency="True" Background="Transparent" WindowStyle="None"
+        WindowStartupLocation="CenterOwner">
+    
+    <Grid>
+        <Border Width="auto" Height="auto" BorderBrush="LimeGreen" BorderThickness="2" CornerRadius="15">
+            <Border.Background>
+                <LinearGradientBrush>
+                    <GradientBrush.GradientStops>
+                        <GradientStopCollection>
+                            <GradientStop Color="#e7ebf7" Offset="0.0"></GradientStop>
+                            <GradientStop Color="#cee3ff" Offset="0.5"></GradientStop>
+                        </GradientStopCollection>
+                    </GradientBrush.GradientStops>
+                </LinearGradientBrush>
+            </Border.Background>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <TextBlock Text="Выход из игры" Padding="5"></TextBlock>
+                <Grid Grid.Row="1" Background="#FFFBC792">
+                    <TextBlock VerticalAlignment="Center" FontSize="18" 
+                               Foreground="Black" HorizontalAlignment="Center">Вы уверены что хотите выйти?</TextBlock>
+                </Grid>
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="43*"/>
+                        <ColumnDefinition Width="105*"/>
+                        <ColumnDefinition Width="148*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Content="Нет" Grid.Column="1" Width="100" HorizontalAlignment="Center" Background="#FF5A68F5" Foreground="Wheat" Margin="-19,0,24,0" IsCancel="True"/>
+                    <Button Content="Да" Grid.Column="2" Width="100" HorizontalAlignment="Center" Background="#FF5A68F5" Foreground="Wheat" Margin="24,0" IsDefault="True" IsCancel="True" Click="exitButtonClick"/>
+                </Grid>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>
