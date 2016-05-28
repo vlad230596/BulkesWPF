@@ -47,6 +47,7 @@ namespace Bulkes
 
         public void checkForFoodAdd()
         {
+            int iteration = 0;
             int mapSize = map.Count;
             double scaleValue = random.NextDouble();
             if (mapSize >= minFoodCountOnMap && mapSize <= maxFoodCountOnMap)
@@ -60,9 +61,14 @@ namespace Bulkes
             {
                 foreach(Unit unit in map)
                 {
-                    if(unit.getIsDeleted())
+                    if (iteration < countFoodToDraw)
                     {
-                        unit.setIsDeleted(false);
+                        if (unit.getIsDeleted())
+                        {
+                            unit.setIsDeleted(false);
+                            delFoodCount--;
+                        }
+                        iteration++;
                     }
                 }
             }
