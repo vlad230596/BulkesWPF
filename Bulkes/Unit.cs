@@ -20,12 +20,12 @@ namespace Bulkes
         protected Color color;
         protected Unit target;
 
-        public float getSpeedX()
+        public virtual float getSpeedX()
         {
             return speedX;
         }
 
-        public float getSpeedY()
+        public virtual float getSpeedY()
         {
             return speedY;
         }
@@ -69,7 +69,7 @@ namespace Bulkes
             this.radius = radius * Settings.UserScale;
         }
         //overrided in Bulk
-        public void updatePosition(Unit unit)//update location + radius
+        public virtual void updatePosition(Unit unit)//update location + radius
         {
             radius = baseRadius * Settings.UserScale;
             // x = unit.x + ((baseX - unit.x) * Settings.UserScale);

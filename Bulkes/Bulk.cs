@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,12 +30,12 @@ namespace Bulkes
         }
 
 
-        public float getSpeedX()
+        public override float getSpeedX()
         {
             return speedX * getSpeedCoefficient();
         }
 
-        public float getSpeedY()
+        public override float getSpeedY()
         {
             return speedY * getSpeedCoefficient();
         }
@@ -70,7 +71,7 @@ namespace Bulkes
           //  }
         }
 
-        public void updatePosition(Unit unit)//update location + radius
+        public override void updatePosition(Unit unit)//update location + radius
         {
             radius = (float)Math.Sqrt((double)mass / Math.PI) * Settings.UserScale;
             //baseRadius = radius;
@@ -84,7 +85,7 @@ namespace Bulkes
         }
 
 
-        public float getFeed()
+        public override float getFeed()
         {
             return mass;
         }
