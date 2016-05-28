@@ -138,7 +138,7 @@ namespace Bulkes
             }
             return radius;
         }
-        public float getFeed()//this method must override in all class
+        public virtual float getFeed()//this method must override in all class
         {
             return 0f;
         }

@@ -55,9 +55,14 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Bulk.cs" />
+    <Compile Include="Enemy.cs" />
+    <Compile Include="Food.cs" />
     <Compile Include="Indicator.cs" />
+    <Compile Include="Sector.cs" />
+    <Compile Include="SectorHolder.cs" />
     <Compile Include="Settings.cs" />
     <Compile Include="Unit.cs" />
+    <Compile Include="User.cs" />
     <Page Include="EndGameDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

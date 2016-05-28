@@ -45,9 +45,10 @@ namespace Bulkes
         public static float StepRadius = 0.01f;
         public static float UnitToTargetCoefficient = 1.5f;
         public static float MinFoodSpeed = 2f;
+        public static int MaxTotalFeed = MaxFoodSize * FoodFeedForRadius * MaxFoodInSector * 2;
         public static Color BulkDefaultColor = Colors.Yellow;
         public static float BulkOffsetRadius = 2f;//min difference between bulkes for move
-                                                  //------------------Enemy--------------------------------
+        //------------------Enemy--------------------------------
         public static int EnemyMaxStepToTarget = 10;
         public static int EnemyFindOffset = 500;
         public static float EnemyStepValue = 5f;
@@ -58,7 +59,7 @@ namespace Bulkes
         public static float IndicatorBaseAlpha = 0.3f;
         public static float JoyStickRadiusOut = 120f;
         public static float JoyStickRadiusIn = 60f;
-        static int CountBulkes = 10;
+        public static int CountBulkes = 10;
         //------------------Dialogs---------------------------------
         public static int DialogPauseID = 0;
         public static int DialogEndID = 1;
