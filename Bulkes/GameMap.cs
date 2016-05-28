@@ -19,7 +19,7 @@ namespace Bulkes
         private int maxFoodCountOnMap;
         private int minFoodCountOnMap;
         private int countFoodToDraw;
-
+         
         public GameMap()
         {
             random = new Random();
