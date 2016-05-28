@@ -57,6 +57,7 @@
     <Compile Include="Bulk.cs" />
     <Compile Include="Enemy.cs" />
     <Compile Include="Food.cs" />
+    <Compile Include="GameMap.cs" />
     <Compile Include="Indicator.cs" />
     <Compile Include="Sector.cs" />
     <Compile Include="SectorHolder.cs" />

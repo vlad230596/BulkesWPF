@@ -44,6 +44,25 @@ namespace Bulkes
             float attraction;
             float maxAttraction = int.MinValue;
             int currentPriority;
+            foreach(Unit point in gameMap.getMap())
+            {
+                if (point != this && !point.getIsDeleted())
+                {
+                    if (isVisibleUnit(point) && radius > point.getRadius())
+                    {
+                        currentPriority = sectors.getPriorityForUnit(point);
+                        float distance = Math.Abs(x - point.getX()) + Math.Abs(y - point.getY());//not real distance use only for choice
+                        float feedByDistance = point.getFeed() / distance;
+                        attraction = feedByDistance - currentPriority * Settings.PriorityValue;
+                        if (attraction > maxAttraction)
+                        {
+                            maxAttraction = attraction;
+                            target = point;
+                        }
+                    }
+                }
+            }
+            /*
             Iterator<Unit> iterator = gameMap.getMap().iterator();
             while (iterator.hasNext())
             {
@@ -63,6 +82,7 @@ namespace Bulkes
                         }
                     }
             }
+            */
         }
 
         public void updateState(GameMap gameMap, SectorHolder sectors)

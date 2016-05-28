@@ -94,6 +94,12 @@ namespace Bulkes
             baseX = x;//update here
             baseY = y;
         }
+
+        public void setIsDeleted(bool isDeleted)
+        {
+            this.isDeleted = isDeleted;
+        }
+
         public void setIsDeleted(bool isDeleted, Unit whatBulk)
         {
             target = whatBulk;
