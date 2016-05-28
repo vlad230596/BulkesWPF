@@ -16,33 +16,24 @@ namespace Bulkes
         private float diffSectorX;
         private float diffSectorY;
         private int delFoodCount;
-        private LinkedList<Unit> addFood;
-        private bool needAddFood;
         private int maxFoodCountOnMap;
         private int minFoodCountOnMap;
-
         private int countFoodToDraw;
-
-        private bool stopTimer;
 
         public GameMap()
         {
             random = new Random();
             map = new LinkedList<Unit>();
-         //   addFood = new LinkedList<Unit>();
             maxFoodCountOnMap = Settings.CountSectorX * Settings.MapSizeX * Settings.CountSectorY * Settings.MapSizeY * Settings.MaxFoodInSector;
             minFoodCountOnMap = (int)Math.Round(maxFoodCountOnMap / 4.0);
             offsetTopLeftX = (Settings.MapSizeX % 2 == 0) ? (int)(-0.5f * Settings.ScreenWidthDefault * (Settings.MapSizeX - 1)) : (-Settings.MapSizeX / 2 * Settings.ScreenWidthDefault);
             offsetTopLeftY = (Settings.MapSizeY % 2 == 0) ? (int)(-0.5f * Settings.ScreenHeightDefault * (Settings.MapSizeY - 1)) : (-Settings.MapSizeY / 2 * Settings.ScreenHeightDefault);
             delFoodCount = 0;
-            needAddFood = false;
-            stopTimer = false;
         }
 
         public void fillFood(List<Bulk> bulkesMap)
         {
             generateSmartMap(bulkesMap);
-            
         }
 
         public void checkForFoodAdd()
