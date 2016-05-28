@@ -84,7 +84,6 @@ namespace Bulkes
         }
 
 
- 
         public float getFeed()
         {
             return mass;
