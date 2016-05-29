@@ -126,6 +126,7 @@ namespace Bulkes
             }
         }
 
+
         private Color getColor()
         {
             return Settings.ColorList[random.Next(Settings.getCountColors())];
