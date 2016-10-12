@@ -1,4 +1,4 @@
-# bulkesWPF
+# BulkesWPF
 * [Bulkes](https://github.com/vlad230596/Bulkes) on WPF C#
 Elagin, Mohnachov
 ![текущий интерфейс](https://github.com/vlad230596/BulkesWPF/blob/master/BulkesScreenshot/ui.png)
